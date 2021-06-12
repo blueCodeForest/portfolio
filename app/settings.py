@@ -17,7 +17,7 @@ if not IS_ON_HEROKU:
 
 SECRET_KEY = env('SECRET_KEY')
 
-DEBUG = env.get_value('DEBUG', cast = bool)
+DEBUG = env.get_value('DEBUG', cast = bool, derault = True)
 
 if DEBUG:
     ALLOWED_HOSTS = ['*']
